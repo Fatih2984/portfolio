@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - COBANOGLU Fatih</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="#home" class="logo">FatihCbglu.fr</a>
+
+            <button class="menu-btn" id="menu-btn">☰</button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p>Bienvenue, moi c'est</p>
+                    <h1><span>COBANOGLU Fatih</span><br />Développeur</h1>
+                    <p>
+                        Je crée des applications et des sites web modernes, propres et efficaces.
+                        Bienvenue sur mon portfolio.
+                    </p>
+                    <div class="buttons">
+                        <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                        <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <h3>Infos rapides</h3>
+                    <ul>
+                        <li>📍 Basé en France</li>
+                        <li>💻 HTML / CSS / JavaScript / React / Symfony</li>
+                        <li>🎯 Objectif : Le freelance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">À <span>propos</span></h2>
+                <p>
+                    Actuellement étudiant en informatique (BUT 3), je suis passionné par le développement informatique.
+                    J'aime concevoir des interfaces propres, développer des fonctionnalités utiles
+                    et apprendre de nouvelles technos à travers différents projets.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-title">Mes <span>compétences</span></h2>
+                <div class="skills-grid">
+                    <article class="card">
+                        <h3>Front-end</h3>
+                        <p>HTML, CSS, JavaScript, React, responsive design, UI simple et propre.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Back-end</h3>
+                        <p>PHP, Symfony, bases de données SQL, API, logique métier.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Programmation</h3>
+                        <p>C++, Python, JavaScript, algorithmique et développement d'applications.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+         <section class="section" id="projects">
+            <div class="container">
+                <h2 class="section-title">Mes <span>projets</span></h2>
+
+                <div class="projects-grid">
+                    <a href="projects/dernek360.html" class="project-link" aria-label="Voir le détail du projet Dernek360">
+                        <article class="card project-card">
+                            <h3>Dernek360</h3>
+                            <p>
+                                Développement d'une application Symfony permettant de gérer des adhérents,
+                                des cotisations, des événements et plusieurs associations.
+                            </p>
+                            <span class="project-cta">Voir le projet en détail →</span>
+                        </article>
+                    </a>
+
+                    <a href="projects/sae-s5-a-01.html" class="project-link" aria-label="Voir le détail du projet SAÉ-S5.A.01">
+                        <article class="card project-card">
+                            <h3>SAÉ-S5.A.01</h3>
+                            <p>
+                                Création d'un algorithme d'identification et de tri des tableaux de Vincent Van Gogh en Python,
+                                dans le cadre d'une SAÉ.
+                            </p>
+                            <span class="project-cta">Voir le projet en détail →</span>
+                        </article>
+                    </a>
+
+                    <a href="projects/mount-blade-companions.html" class="project-link" aria-label="Voir le détail du projet personnel sur Mount and Blade">
+                        <article class="card project-card">
+                            <h3>Petit projet personnel</h3>
+                            <p>
+                                Réalisation d'une petite application en Qt C++ sur les compagons de Mount&Blade : Warband.
+                            </p>
+                            <span class="project-cta">Voir le projet en détail →</span>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Me <span>contacter</span></h2>
+                <div class="contact-box">
+                    <p>Vous pouvez me contacter par mail pour discuter d'un projet ou d'une opportunité.</p>
+                    <p><strong>Email :</strong> fatihcobanoglu84@gmail.com</p>
+                    <!-- <p><strong>LinkedIn :</strong> linkedin.com/in/fatih-cobanoglu</p> -->
+                    <a href="mailto:fatihcobanoglu84@gmail.com" class="btn btn-primary">Envoyer un mail</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 - COBANOGLU Fatih. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+
+</html>
